@@ -51,16 +51,9 @@ export default {
 		}
 	},
 	created() {
-		setTimeout(()=>{
 			this._getRecommend()
-		},1000)
 		this._getDiscList()
 	},
-	activated() {
-      setTimeout(() => {
-        this.$refs.slider && this.$refs.slider.refresh()
-      }, 20)
-    },
 	methods:{
 		_getRecommend(){
 			getRecommend().then((res) => {

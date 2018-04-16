@@ -23,4 +23,5 @@ export default {
 <style rel="stylesheet/less">
 html,body{background: #fdfdfd;}
 *{margin:0;padding:0;}
+ul,li{list-style: none;}
 </style>

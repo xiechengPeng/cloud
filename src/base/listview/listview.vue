@@ -11,6 +11,11 @@
                 </ul>
             </li>
         </ul>
+        <div class="list-shortcut">
+            <ul>
+                <li v-for="item in shortcutList" class="item">{{item}}</li>
+            </ul>
+        </div>
         <div v-show="!data.length" class="loading-container">
             <loading></loading>
         </div>
@@ -27,6 +32,13 @@
                 default:[]
             }
         },
+        computed:{
+            shortcutList(){
+                return this.data.map((group)=>{
+                    return group.title.substr(0,1)
+                })
+            }
+        },
         components: {
           Scroll,
           Loading
@@ -35,8 +47,6 @@
 </script>
 <style lang="less">
 .listview{
-    position: relative;
-    width: 100%;
     height: 100%;
     overflow: hidden;
     background:#fff;

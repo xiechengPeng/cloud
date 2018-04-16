@@ -1,6 +1,7 @@
 <template>
 	<div class="singer" ref="singer">
         <listview :data="singers"></listview>
+        <router-view></router-view>
     </div>
 </template>
 <script type="ecmascript-6">
@@ -18,7 +19,7 @@
             }
         },
         created(){
-                this._getSingerList()
+            this._getSingerList() 
         },
         methods:{
             _getSingerList(){
